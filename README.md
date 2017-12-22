@@ -13,3 +13,21 @@ This script will alternate the green leds and red leds. The top white led is all
 ### ants.py
 
 This script simply turns each led on then off in sequence.
+
+## Download and Run
+
+To download the sample code simply run the following command:
+
+```
+git clone https://github.com/modmypi/Programmable-Xmas-Tree/
+```
+
+To run the sample code:
+
+```
+cd Programmable-Xmas-Tree
+```
+
+```
+sudo python ants.py
+```
