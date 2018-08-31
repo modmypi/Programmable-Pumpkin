@@ -1,9 +1,24 @@
+#!/usr/bin/python
+
+#LED1 - 18 - 24
+#LED2 - 16 - 23
+#LED3 - 15 - 22
+#LED4 - 40 - 21
+#LED5 - 38 - 20
+#LED6 - 35 - 19
+#LED7 - 12 - 18
+#LED8 - 11 - 17
+#LED9 - 36 - 16
+#LED10 - 33 - 13
+#LED11 (GREEN) - 31 - 6
+#LED12 (GREEN) - 32 - 12
+
 from RPi import GPIO
 from time import sleep
 
 GPIO.setmode(GPIO.BCM)
 
-LEDS = (11,16,17,18,19,20,21,22,23,24,12)
+LEDS = (18,17,16,13,12,24,23,6,22,21,20,19)
 
 GPIO.setup(LEDS, GPIO.OUT, initial=0)
 
