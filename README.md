@@ -1,6 +1,6 @@
 # Programmable Pumpkin - Sample Code
 
-Here you will find three different code examples to get you started with the Xmas Tree
+Here you will find three different code examples to get you started with the Pumpkin
 
 ### all_on.py
 
