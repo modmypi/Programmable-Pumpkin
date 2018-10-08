@@ -1,6 +1,8 @@
 # Programmable Pumpkin - Sample Code
 
-Here you will find three different code examples to get you started with the Pumpkin
+Here you will find three different code examples to get you started with the Pumpkin Pi from ModMyPi.
+
+There is either a [kit you can build](https://www.modmypi.com/raspberry-pi/led-displays-and-drivers-1034/led-boards-1040/halloween-pumpkin-solder-kit) or a [pre-assembled Pumpkin](https://www.modmypi.com/raspberry-pi/led-displays-and-drivers-1034/led-boards-1040/halloween-pumpkin-programmable-kit) for you to get your Halloween spook on with.
 
 ### all_on.py
 
