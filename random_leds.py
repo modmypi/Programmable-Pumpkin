@@ -23,7 +23,11 @@ LEDS = (17,22,6,13,19,18,23,24,12,16,20,21)
 
 tree = LEDBoard(*LEDS,pwm=True)
 
-for led in tree:
-	led.source_delay = 0.1
-	led.source = random_values()
-pause()
+try:
+	for led in tree:
+		led.source_delay = 0.1
+		led.source = random_values()
+	pause()
+except KeyboardInterrupt:
+	tree.off()
+	tree.close()
