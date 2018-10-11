@@ -15,19 +15,18 @@
 
 # sudo apt-get install python-gpiozero python3-gpiozero
 
-from gpiozero import LEDBoard
+from pumpkinpi import PumpkinPi
 from gpiozero.tools import random_values
 from signal import pause
 
-LEDS = (17,22,6,13,19,18,23,24,12,16,20,21)
-
-tree = LEDBoard(*LEDS,pwm=True)
+pumpkin = PumpkinPi(pwm=True)
+leds = pumpkin.leds
 
 try:
-	for led in tree:
+	for led in leds:
 		led.source_delay = 0.1
 		led.source = random_values()
 	pause()
 except KeyboardInterrupt:
-	tree.off()
-	tree.close()
+	pumpkin.off()
+	pumpkin.close()

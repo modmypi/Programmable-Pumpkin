@@ -13,27 +13,19 @@
 #LED11 (GREEN) - 31 - 6
 #LED12 (GREEN) - 32 - 12
 
-from RPi import GPIO
+from pumpkinpi import PumpkinPi
 from time import sleep
 
-GPIO.setmode(GPIO.BCM)
+pumpkin = PumpkinPi()
+leds = pumpkin.leds
 
-LEDS = (18,17,16,13,12,24,23,6,22,21,20,19)
-
-GPIO.setup(LEDS, GPIO.OUT, initial=0)
+step = [2,3,4,5,0,6,11,1,10,9,8,7]
 
 try:
-	i = 0
-	led_length = len(LEDS)
-	while i < led_length:
-		if i == 0:
-			GPIO.output(LEDS[led_length-1],0)
-		else:
-			GPIO.output(LEDS[i-1],0)
-		GPIO.output(LEDS[i],1)
-		i += 1
-		if i == led_length:
-			i = 0
-		sleep(.2)
-except:
-	GPIO.cleanup()
+        for index in step:
+                leds[index].on()
+                sleep(0.2)
+                leds[index].off()
+except KeyboardInterrupt:
+        pumpkin.off()
+        pumpkin.close()
