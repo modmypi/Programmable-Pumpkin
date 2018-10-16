@@ -12,6 +12,22 @@ As the name of the file implies, this simply turns on all the LEDS on the board.
 
 This script simply turns each led on then off in sequence.
 
+### pumpkinpi.py
+
+The PumpkinPi class. To use include:
+
+```
+from pumpkinpi import PumpkinPi
+
+pumpkin = PumpkinPi()
+pumpkin.on()
+```
+This class uses [gpiozero](https://github.com/RPi-Distro/python-gpiozero) and the PumpkinPi board can be set up as either a set of LEDs which can be on or off. Or it can be setup as a PWM style LED board with the following:
+```
+pumpkin = PumpkinPi(pwm=True)
+pumpkin.pulse()
+```
+
 ### random_leds.py
 
 This script will randomly turn on/off the leds at random brightnesses.
